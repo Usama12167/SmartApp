@@ -8,9 +8,10 @@ import {
     Image,
   } from 'react-native';
   import React, {useState} from 'react';
-  import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+  
+  
   import background from '../Image/background.png';
-  const OTP = () => {
+  const OTP = ({navigation}) => {
     const [otp, setOtp] = useState('');
     
     return (
@@ -19,10 +20,10 @@ import {
         <View style={styles.container1}>
           <View style={styles.text}>
             <Text style={{color: 'white'}}>
-              {'Please enter your email to reset your password:'}
+              {'Verify Otp '}
             </Text>
             <View>
-              <MaterialCommunityIcons name="email-edit" size={24} />
+              
               <TextInput
                 style={styles.form}
                 value={otp}

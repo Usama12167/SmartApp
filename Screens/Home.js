@@ -27,7 +27,7 @@ const Home = () => {
 <TouchableOpacity>
 <Card>
   <Card.Title
-    title="Diet plan"
+    title="Bmi "
     onPress={() => navigation.navigate('login')}
 />
 </Card>

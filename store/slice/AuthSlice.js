@@ -1,7 +1,4 @@
-/**
- * Loading reducer made separate for easy blacklisting
- * Avoid data persist
- */
+
 import {createSlice} from '@reduxjs/toolkit';
 const initialState = {
   isLoggedIn: false,

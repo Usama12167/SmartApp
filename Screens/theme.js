@@ -1,8 +1,5 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useDispatch } from 'react-redux'
-
-
 import { View } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
