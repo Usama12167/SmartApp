@@ -10,13 +10,13 @@ import {
 
 import React, {useState} from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import background from '../Image/background.png';
+import imageo from '../Image/imageo.png';
 const Reset = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [code, setOtp] = useState('');
   return (
     <View style={styles.container}>
-      <Image style={styles.back} source={background} />
+      <Image style={styles.back} source={imageo} />
       <View style={styles.container1}>
         <View style={styles.text}>
           <Text style={{color: 'white'}}>

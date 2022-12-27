@@ -7,10 +7,10 @@ const Theme = () => {
   const theme = useSelector((state) => state.theme)
   const dispatch = useDispatch()
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    localStorage.setItem('theme', theme)
-  }, [ theme ])
+  //   localStorage.setItem('theme', theme)
+  // }, [ theme ])
 
   const handleChange = () => {
     const next = theme === 'dak' ? 'light' : 'dark'
@@ -20,7 +20,7 @@ const Theme = () => {
   return (
     <View>
       <TouchableOpacity>
-    		<Text>eegdssd</Text>
+    		<Text>Theme</Text>
       onClick={handleChange}
      
     </TouchableOpacity>

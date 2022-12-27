@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import background from '../Image/background.png';
+import imageo from '../Image/imageo.png';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {Picker} from '@react-native-picker/picker';
 const Profile = () => {
@@ -95,7 +95,7 @@ const Profile = () => {
 
       <View style={styles.container}>
         <ScrollView>
-          <Image style={styles.back} source={background} />
+          <Image style={styles.back} source={imageo} />
 
           <View style={{alignItems: 'center'}}></View>
 

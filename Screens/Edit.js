@@ -7,6 +7,7 @@ const UselessTextInput = () => {
   const simpleAlertHandler = () => {
     
     Alert.alert(
+      <TextInput>ddgxddddd</TextInput>,
     
       'Allert',
     

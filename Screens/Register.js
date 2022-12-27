@@ -11,7 +11,7 @@ import {
   ScrollView,
 } from 'react-native';
 import background from '../Image/background.png';
-
+import imageo from '../Image/imageo.png';
 import {Picker} from '@react-native-picker/picker';
 
 const Register = ({navigation}) => {
@@ -94,7 +94,7 @@ const Register = ({navigation}) => {
 
       <View style={styles.container}>
         <ScrollView>
-          <Image style={styles.back} source={background} />
+          <Image style={styles.back} source={imageo} />
 
           <View style={{alignItems: 'center'}}></View>
 
