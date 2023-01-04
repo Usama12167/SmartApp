@@ -8,7 +8,10 @@ import { ThemeState } from 'app/models/reducers/theme';
 const initialState: ThemeState = {
     isDark: false,
 };
-
+// const theme = () => {
+//     const next = theme === 'dak' ? 'light' : 'dark';
+//     dispatch(set(next));
+//   };
 const themeSlice = createSlice({
     name: 'theme',
     initialState,
@@ -22,5 +25,5 @@ const themeSlice = createSlice({
     },
 });
 
-export const { setIsDarkTheme } = themeSlice.actions;
+export const { setIsDarkTheme, } = themeSlice.actions;
 export default themeSlice.reducer;

@@ -31,6 +31,18 @@ const Password = () => {
               keyboardType={'number'}
             />
           </View>
+          <View>
+            <TextInput
+              style={styles.form}
+              value={password}
+              placeholder={'Repeat password'}
+              placeholderTextColor="white"
+              onChangeText={text => setPassword(text)}
+              autoCapitalize={'none'}
+              underlineColorAndroid={'white'}
+              keyboardType={'number'}
+            />
+          </View>
           <View style={styles.form1}>
             <TouchableOpacity onPress={() => {}}>
               <Text>Save</Text>

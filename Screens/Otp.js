@@ -47,7 +47,7 @@ import {
     </View>
   );
 }
-
+export default OTP;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -181,7 +181,7 @@ const Profile = () => {
                 setValue={setValue}
                 setItems={setItems}
               />*/}
-               <TextInput
+               {/* <TextInput
                 style={styles.inputStyle}
                 onChangeText={UserPassword => setUserPassword(UserPassword)}
                 placeholder="Select Gender"
@@ -201,7 +201,7 @@ const Profile = () => {
                 placeholderTextColor="white"
                 keyboardType="email-address"
                 blurOnSubmit={false}
-              />
+              /> */}
             </View>
             <View style={styles.SectionStyle}>
               <TextInput
