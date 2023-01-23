@@ -25,7 +25,6 @@ const Profile = () => {
   const [info, setInfo] = useState('');
   const [selectedValue, setSelectedValue] = useState('');
 
-
   const [userPassword, setUserPassword] = useState('');
 
   const [errortext, setErrortext] = useState('');
@@ -159,50 +158,7 @@ const Profile = () => {
               />
             </View>
 
-            <View style={styles.SectionStyle}>
-              {/* <Picker
-                selectedValue={selectedValue}
-                underlineColorAndroid={"white"}
-                style={{height: 50, width: 150 ,color:"red"}}
-                onValueChange={(itemValue, itemIndex) =>
-                  setSelectedValue(itemValue)
-                }>
-                <Text>jhgbvgc </Text>
-                <Picker.Item label="Male" value="Male" />
-                <Picker.Item label="Female" value="Female" />
-              </Picker> 
-              <DropDownPicker 
-                open={open}
-                //underlineColorAndroid={'white'}
-                value={value}
-                placeholder="Select Gender"
-                items={items}
-                setOpen={setOpen}
-                setValue={setValue}
-                setItems={setItems}
-              />*/}
-               {/* <TextInput
-                style={styles.inputStyle}
-                onChangeText={UserPassword => setUserPassword(UserPassword)}
-                placeholder="Select Gender"
-                placeholderTextColor="white"
-                returnKeyType="next"
-                secureTextEntry={true}
-                underlineColorAndroid={'white'}
-                blurOnSubmit={false}
-              />
-            </View>
-            <View style={styles.SectionStyle}>
-              <TextInput
-                style={styles.inputStyle}
-                onChangeText={UserEmail => setUserEmail(UserEmail)}
-                underlineColorAndroid={'white'}
-                placeholder="Enter Email"
-                placeholderTextColor="white"
-                keyboardType="email-address"
-                blurOnSubmit={false}
-              /> */}
-            </View>
+            <View style={styles.SectionStyle}></View>
             <View style={styles.SectionStyle}>
               <TextInput
                 style={styles.inputStyle}
@@ -223,15 +179,9 @@ const Profile = () => {
               style={styles.buttonStyle}
               activeOpacity={0.5}
               onPress={handleSubmitButton}>
-              <Text style={styles.buttonTextStyle}>REGISTER</Text>
+              <Text style={styles.buttonTextStyle}>Update Profile</Text>
             </TouchableOpacity>
           </KeyboardAvoidingView>
-          <TouchableOpacity
-            style={styles.buttonStyle1}
-            activeOpacity={0.5}
-            onPress={() => navigation.navigate('login')}>
-            <Text style={{color: 'white', marginTop: 18}}>Login Now</Text>
-          </TouchableOpacity>
         </ScrollView>
       </View>
       {/* <View>

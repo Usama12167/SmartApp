@@ -8,6 +8,7 @@ import Reset from '../Screens/Reset';
 import Home from '../Screens/Home';
 import Food from '../Screens/Food';
 import Theme from '../Screens/theme';
+// import OTP from '../Screens/Otp';
 import OTP from '../Screens/Otp';
 //import DrawerScreen from '../drawerNavigation';
 import Edit from '../Screens/Edit';

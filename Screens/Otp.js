@@ -4,12 +4,11 @@ import {
     TouchableOpacity,
     Text,
     TextInput,
-    StatusBar,
-    Image,
+    
   } from 'react-native';
   import React, {useState} from 'react';
-  import background from '../Image/background.png';
-  const OTP = ({navigation}) => {
+
+  const OTP = () => {
     const [otp, setOtp] = useState('');
     
     return (
@@ -69,59 +68,3 @@ const styles = StyleSheet.create({
     alignItems:"flex-end",marginRight:10,
   }
 });
-  //     <View style={styles.container}>
-  //       <Image style={styles.back} source={background} />
-        
-  //     </View>
-  //   );
-  // };
-  // export default OTP;
-  // const styles = StyleSheet.create({
-  //   container: {
-  //     flex: 1,
-  //     backgroundColor: '#fff',
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //     backgroundColor: 'white',
-  //   },
-  //   container1: {
-  //     display: 'flex',
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //     width: '100%',
-  //     height: '100%',
-  //   },
-  //   text: {
-  //     alignItems: 'center',
-  //     marginTop: 50,
-  //     justifyContent: 'center',
-  //     color: 'white',
-  //   },
-  //   form: {
-  //     width: 300,
-  //     borderRadius: 250,
-  //     height: 50,
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //     marginTop: 40,
-  
-  //     //  backgroundColor: "skyblue",
-  //   },
-  //   form1: {
-  //     width: 300,
-  //     borderRadius: 250,
-  //     height: 50,
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //     marginTop: 40,
-  //     backgroundColor: 'white',
-  //   },
-  //   back: {
-  //     width: '100%',
-  //     height: '100%',
-  //     position: 'absolute',
-  //     top: 10,
-  //     zIndex: -1,
-  //   },
-  // });
-  

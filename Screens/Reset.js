@@ -34,10 +34,11 @@ const Reset = ({navigation}) => {
               underlineColorAndroid={'white'}
               keyboardType={'email-address'}
             />
-           
           </View>
           <View style={styles.form1}>
-            <TouchableOpacity onPress={() => navigation.navigate('otp')}>
+            <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => navigation.navigate('otp')}>
               <Text>{'Request password reset'}</Text>
             </TouchableOpacity>
           </View>

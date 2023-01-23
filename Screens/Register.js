@@ -6,7 +6,7 @@ import {
   Text,
   Image,
   KeyboardAvoidingView,
-  Keyboard,
+
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
@@ -159,11 +159,9 @@ const Register = ({navigation}) => {
             </View>
 
             <View style={styles.picker1}>
-               <Picker
-               
+              <Picker
                 selectedValue={selectedValue}
-                
-                style={{height: 50, width: 150 ,color:"white"}}
+                style={{height: 50, width: 150, color: 'white'}}
                 onValueChange={(itemValue, itemIndex) =>
                   setSelectedValue(itemValue)
                 }>
@@ -171,17 +169,8 @@ const Register = ({navigation}) => {
                 <Picker.Item label="Select Gender" value="" />
                 <Picker.Item label="Male" value="Male" />
                 <Picker.Item label="Female" value="Female" />
-              </Picker> 
-              {/* <DropDownPicker 
-                open={open}
-                //underlineColorAndroid={'white'}
-                value={value}
-                placeholder="Select Gender"
-                items={items}
-                setOpen={setOpen}
-                setValue={setValue}
-                setItems={setItems}
-              /> */}
+              </Picker>
+             
             </View>
             <View style={styles.SectionStyle}>
               <TextInput
@@ -258,15 +247,15 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     margin: 15,
   },
-  picker1:{
+  picker1: {
     flexDirection: 'row',
     height: 40,
     fontSize: 20,
-    borderWidth:2,
-    borderTopColor:"transparent",
-    borderEndColor:"transparent",
-    borderStartColor:"transparent",
-    borderColor:"white",
+    borderWidth: 2,
+    borderTopColor: 'transparent',
+    borderEndColor: 'transparent',
+    borderStartColor: 'transparent',
+    borderColor: 'white',
     margin: 15,
   },
   container: {

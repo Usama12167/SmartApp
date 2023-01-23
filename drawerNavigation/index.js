@@ -19,7 +19,7 @@ import MyAvatar from '../Screens/avater';
 import {View, Text} from 'react-native';
 import {Avatar} from 'react-native-paper';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import bmi from '../Image/bmi.png'
+import bmi from '../Image/bmi.png';
 const Drawer = createDrawerNavigator();
 
 const CustomDrawer = () => {
@@ -28,7 +28,7 @@ const CustomDrawer = () => {
   return (
     <View>
       <View>
-      <Avatar.Image size={200} source={bmi} />
+        <Avatar.Image size={200} source={bmi} />
       </View>
       <TouchableOpacity
         style={{flexDirection: 'row', padding: 15}}
@@ -102,7 +102,7 @@ export default function DrawerScreen() {
         component={Home}
         options={{
           headerStyle: {
-            backgroundColor: '#47a89a',
+            // backgroundColor: '#47a89a',
           },
         }}
       />
@@ -111,7 +111,7 @@ export default function DrawerScreen() {
         component={Profile}
         options={{
           headerStyle: {
-            backgroundColor: '#47a89a',
+            // backgroundColor: '#47a89a',
           },
         }}
       />
@@ -120,7 +120,7 @@ export default function DrawerScreen() {
         component={Food}
         options={{
           headerStyle: {
-            backgroundColor: '#47a89a',
+            // backgroundColor: '#47a89a',
           },
         }}
       />
@@ -129,7 +129,7 @@ export default function DrawerScreen() {
         component={Reset}
         options={{
           headerStyle: {
-            backgroundColor: '#47a89a',
+            // backgroundColor: '#47a89a',
           },
         }}
       />
@@ -139,7 +139,7 @@ export default function DrawerScreen() {
         component={Theme}
         options={{
           headerStyle: {
-            backgroundColor: '#47a89a',
+            // backgroundColor: '#47a89a',
           },
         }}
       />
