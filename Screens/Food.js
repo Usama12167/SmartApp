@@ -1,110 +1,114 @@
-import React from 'react';
-//import {Button, StyleSheet, Text, View} from 'react-native';
-import DialogInput from 'react-native-dialog-input';
-import {
-    View,
-    StyleSheet,
-    TouchableOpacity,
-    Text,
-    TextInput,
-   
-  } from 'react-native';
-  
 
-  const Food = () => {
-    const [otp, setOtp] = useState('');
+import React from 'react';
+import {
+  View,
+  Button,
+  Text,
+  FlatList,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+import diet from '../Image/diet.png';
+import Foods from './Request';
+ import {Card} from 'react-native-elements';
+const dietPlan = [
+  {
+    id: 1,
+    name: 'Breakfast',
+    description: 'Oatmeal with banana and honey',
     
-    return (
-      <View style={styles.container}>
-      <View>
-        <Text style={styles.Text1}>
-          Verify your email
-        </Text>
+  },
+  {
+    id: 2,
+    name: 'Lunch',
+    description: 'Whole grain sandwich ',
+
+  },
+  {
+    id: 3,
+    name: 'Dinner',
+    description: ' vegetables',
+    
+  },
+  {
+    id: 4,
+    name: 'Dinner',
+    description: ' vegetables',
+    
+  },
+];
+
+const Food = () => {
+  return (
+    <View style={styles.container}>
+      <Image style={styles.back} source={diet} />
+      <View style={styles.s2}>
+        <Text style={styles.text}>BMI:</Text>
       </View>
-      <View>
+      <FlatList
+        data={dietPlan}
+        renderItem={({item}) => (
+          <TouchableOpacity style={{}}>
+            <Card title={item.name} image={item.image}>
+              <Text style={styles.description1}>{item.name}</Text>
+              {/* <Image source={item.image} style={styles.image} /> */}
+              <Text style={styles.description}>{item.description}</Text>
+            </Card>
+          </TouchableOpacity>
+        )}
+        keyExtractor={item => item.id.toString()}
+      />
+      {/* <Button title=" custom request" onPress={() => setVisible(true)} /> */}
+     
+<Foods></Foods>
       
-        <Text style={styles.Text2}>
-         Please enter the one time-otp sent to
-        </Text>
-      </View>
-      <View>
-        <TextInput style={styles.input}
-                value={otp}
-                placeholder='otp code'
-                onChangeText={text => setOtp(text)}
-                autoCapitalize={'none'}
-                underlineColorAndroid={'black'}
-                keyboardType={'number'}
-        />
-      </View>
-      <View style={styles.Text3}>
-        <Text >Did't recieve the OTP?Wait </Text>
-      </View>
-      <View>
-        <TouchableOpacity style={styles.button}
-         onPress={() => {}}>
-          <Text style={{color:"lightblue"}}>Resend It</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
-}
-export default Food;
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
   },
-  Text1: {
-    marginTop: 10, 
-    fontSize: 30, color: 'black'
+  s2: {
+    // backgroundColor: 'red',
+    flex: 1,
+    width: '100%',
+    height: '10%',
+    display: 'flex',
+    padding: 20,
+    borderRadius: 200,
+    // borderTopLeftRadius: 30,
+    // borderTopRightRadius: 30,
   },
-  Text2:{
-    marginTop: 10, fontSize: 15, color: 'black'
+  description: {
+    marginBottom: 10,
+    fontSize: 18,
+    textAlign: 'center',
+
+    color: '#656565',
   },
-  input:{
-    marginTop:40,
+  description1: {
+    marginBottom: 10,
+    fontSize: 18,
+    textAlign: 'center',
+    // color: 'red'
+    backgroundColor: 'green',
   },
-  Text3:{
-    marginTop:150,alignItems:"flex-start"
+  text: {
+    marginTop: 20,
+    marginLeft: 10,
+    fontSize: 30,
   },
-  button:{
-    alignItems:"flex-end",marginRight:10,
-  }
+  back: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: 10,
+    zIndex: -1,
+  },
 });
 
-// const Food = () => {
-//   const [visible, setVisible] = React.useState(false);
-//   const [input, setInput] = React.useState('');
-
-//   return (
-//     <View style={styles.container}>
-//       {/* {input ? 
-//                 <Text style={styles.title}>{input}</Text>
-//                 :
-//                 <Text style={styles.title}>App</Text>
-//             } */}
-
-//       <DialogInput
-//         isDialogVisible={visible}
-//         title={'Custom Request'}
-//         // message={"Message "}
-//         hintInput={'Enter Text'}
-//         submitInput={inputText => {
-//           setInput(inputText), setVisible(false);
-//         }}
-//         closeDialog={() => setVisible(false)}></DialogInput>
-//       <Button title="Send custom request" onPress={() => setVisible(true)} />
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: 'skyblue',
-//   },
-// });
-
-// export default Food;
+export default Food;

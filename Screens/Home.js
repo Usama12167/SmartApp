@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {Card} from 'react-native-paper';
+ import {Card} from 'react-native-paper';
 import background from '../Image/background.png';
 import bmi from '../Image/bmi.png';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';

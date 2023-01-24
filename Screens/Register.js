@@ -225,18 +225,7 @@ export default Register;
 
 const styles = StyleSheet.create({
   SectionStyle: {
-    // inputView: {
-    //   // backgroundColor: "skyblue",
-
-    //    borderRadius: 30,
-    //    width: "70%",
-    //   flexDirection:"row",
-    //    margin: 20,
-    //    borderTopLeftRadius: 30,
-    //    borderTopRightRadius: 30,
-    //    alignItems: "center",
-
-    //  },
+   
     flexDirection: 'row',
     height: 40,
     fontSize: 20,
