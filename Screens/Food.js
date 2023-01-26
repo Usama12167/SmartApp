@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   View,
@@ -11,31 +10,27 @@ import {
 } from 'react-native';
 import diet from '../Image/diet.png';
 import Foods from './Request';
- import {Card} from 'react-native-elements';
+import {Card} from 'react-native-elements';
 const dietPlan = [
   {
     id: 1,
     name: 'Breakfast',
     description: 'Oatmeal with banana and honey',
-    
   },
   {
     id: 2,
     name: 'Lunch',
     description: 'Whole grain sandwich ',
-
   },
   {
     id: 3,
     name: 'Dinner',
     description: ' vegetables',
-    
   },
   {
     id: 4,
     name: 'Dinner',
     description: ' vegetables',
-    
   },
 ];
 
@@ -60,9 +55,8 @@ const Food = () => {
         keyExtractor={item => item.id.toString()}
       />
       {/* <Button title=" custom request" onPress={() => setVisible(true)} /> */}
-     
-<Foods></Foods>
-      
+
+      <Foods></Foods>
     </View>
   );
 };

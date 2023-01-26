@@ -1,4 +1,3 @@
-
 import {createSlice} from '@reduxjs/toolkit';
 const initialState = {
   isLoggedIn: false,
@@ -13,19 +12,21 @@ const AuthState = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    onLoginResponse: (state) => {
+    onLoginResponse: state => {
       return {
         ...state,
         isLoadingVisible: true,
       };
     },
-    logOut: (state) => {
+    logOut: (state, action) => {
       return {
-        ...state,
-        isLoadingVisible: true,
+        // ...state,
+        // isLoggedIn: false,
+        // user: null,
+        islogOut: initialState,
       };
     },
-    
+
     requestRegister: (state, action) => {
       return {
         ...state,
@@ -35,9 +36,9 @@ const AuthState = createSlice({
         // token: action.payload.token,
         // provider: 'email',
         isLoggedIn: true,
+        ...action.payload,
       };
     },
-    
   },
 });
 
