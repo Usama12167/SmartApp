@@ -9,7 +9,7 @@ import Login from '../Screens/LoginScreen';
 import Food from '../Screens/Food';
 import Logout from '../Screens/Logout';
 import Edit from '../Screens/Edit';
-
+import FeedbackScreen from '../Screens/feedback';
 import Theme from '../Screens/theme';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Icons from 'react-native-vector-icons/AntDesign';
@@ -133,6 +133,16 @@ export default function DrawerScreen() {
           },
         }}
       />
+      <Drawer.Screen
+        name="Feedback"
+        component={FeedbackScreen}
+        options={{
+          headerStyle: {
+            // backgroundColor: '#47a89a',
+          },
+        }}
+      />
+
       <Drawer.Screen name="Logout" component={Logout} />
       <Drawer.Screen
         name="Theme"

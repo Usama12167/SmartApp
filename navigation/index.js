@@ -1,13 +1,14 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../Screens/LoginScreen';
 import Register from '../Screens/Register';
-import SplashScreen from 'react-native-splash-screen'
+import SplashScreen from 'react-native-splash-screen';
 import Reset from '../Screens/Reset';
 import Home from '../Screens/Home';
 import Food from '../Screens/Food';
 import Theme from '../Screens/theme';
+import FeedbackScreen from '../Screens/feedback';
 // import OTP from '../Screens/Otp';
 import OTP from '../Screens/Otp';
 //import DrawerScreen from '../drawerNavigation';
@@ -15,55 +16,57 @@ import Edit from '../Screens/Edit';
 const Stack = createNativeStackNavigator();
 
 const NavigationComponent = () => {
-
   SplashScreen.hide();
-  
 
   return (
-      <Stack.Navigator>
-       
-       
-       
-        <Stack.Screen name='login' component={Login} options ={ { 
-          headerShown : false }} />
-        <Stack.Screen name='signup' component={Register} options ={ { headerShown : false }} />
-        <Stack.Screen name='reset' component={Reset} options ={ { headerShown : false }} />
-        <Stack.Screen name='otp' component={OTP} options ={ { headerShown : false }} />
+    <Stack.Navigator>
+      <Stack.Screen
+        name="login"
+        component={Login}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="signup"
+        component={Register}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="reset"
+        component={Reset}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen name="otp" component={OTP} options={{headerShown: false}} />
 
-        <Stack.Screen name='home' component={Home} options ={ { headerShown : false }} />
-        <Stack.Screen name='list' component={Food} options ={ { headerShown : false }} />
-        
-        {/* <Stack.Screen name='edit' component={Edit} options ={ { headerShown : false }} /> */}
+      <Stack.Screen
+        name="home"
+        component={Home}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="list"
+        component={Food}
+        options={{headerShown: false}}
+      />
 
-         
-
-      </Stack.Navigator>
-      
+      {/* <Stack.Screen name='edit' component={Edit} options ={ { headerShown : false }} /> */}
+    </Stack.Navigator>
   );
-  
-
 };
 
-
 // const  DrawerScreen=()=> {
-  
+
 //   return (
 //       <Drawer.Navigator initialRouteName="Home">
-        
+
 //         <Drawer.Screen name="home" component={Home} />
 //         <Drawer.Screen name="update profile" component={Profile} />
 //       </Drawer.Navigator>
 //   );
 //   };
 
-
-
-export default NavigationComponent
-
-
-
-
-
+export default NavigationComponent;
 
 /*
 

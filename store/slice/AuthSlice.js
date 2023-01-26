@@ -20,7 +20,6 @@ const AuthState = createSlice({
     },
     logOut: (state, action) => {
       return {
-        // ...state,
         // isLoggedIn: false,
         // user: null,
         islogOut: initialState,
@@ -29,7 +28,7 @@ const AuthState = createSlice({
 
     requestRegister: (state, action) => {
       return {
-        ...state,
+        // ...state,
         // id: action.payload.id,
         // username: action.payload.name,
         // email: action.payload.email,

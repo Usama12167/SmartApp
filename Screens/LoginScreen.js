@@ -70,8 +70,8 @@ const Login = ({navigation}) => {
 
         <TouchableOpacity
           style={styles.loginBtn}
-          onPress={handleSubmitButton => {
-            dispatch(loadingSlice());
+          onPress={() => {
+            // dispatch(loadingSlice());
             console.log('==>');
             dispatch(requestRegister());
           }}>
