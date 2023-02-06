@@ -8,11 +8,14 @@ import {
   Button,
   TouchableOpacity,
   ScrollView,
+  ImageBackground,
 } from 'react-native';
+import {ActivityIndicator} from 'react-native';
 import loadingSlice from '../store/slice/loadingSlice';
 import {useDispatch} from 'react-redux';
 import background from '../Image/background.png';
 import smartdiet from '../Image/smartdiet.png';
+import {enableLoading} from '../store/slice/loadingSlice';
 import {requestRegister} from '../store/slice/AuthSlice';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -35,7 +38,7 @@ const Login = ({navigation}) => {
   };
   return (
     <View style={styles.container}>
-      <Image style={styles.back} source={background} />
+      <ImageBackground style={styles.back} source={background} />
 
       <View style={styles.container1}>
         <View>
@@ -71,10 +74,12 @@ const Login = ({navigation}) => {
         <TouchableOpacity
           style={styles.loginBtn}
           onPress={() => {
-            // dispatch(loadingSlice());
             console.log('==>');
+            // dispatch(enableLoading());
+
             dispatch(requestRegister());
           }}>
+          {/* <ActivityIndicator size="large" /> */}
           <Text style={{color: 'black'}}>LOGIN</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('signup')}>

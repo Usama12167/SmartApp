@@ -2,6 +2,7 @@ import * as React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
 // import DrawerContent from '@react-navigation/drawer';
+import {ActivityIndicator} from 'react-native';
 import Reset from '../Screens/Reset';
 import Home from '../Screens/Home';
 import Profile from '../Screens/Updateprofile';
@@ -16,13 +17,18 @@ import Icons from 'react-native-vector-icons/AntDesign';
 import Icone from 'react-native-vector-icons/MaterialCommunityIcons';
 import Iconw from 'react-native-vector-icons/Ionicons';
 import MyAvatar from '../Screens/avater';
+import {useDispatch} from 'react-redux';
+import {logOut} from '../store/slice/AuthSlice';
+
 import {View, Text} from 'react-native';
 import {Avatar} from 'react-native-paper';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import bmi from '../Image/bmi.png';
+import {enableLoading} from '../store/slice/loadingSlice';
 const Drawer = createDrawerNavigator();
 
 const CustomDrawer = () => {
+  const dispatch = useDispatch();
   const navigation = useNavigation();
 
   return (
@@ -73,9 +79,8 @@ const CustomDrawer = () => {
       <TouchableOpacity
         style={{flexDirection: 'row', padding: 15}}
         onPress={() => {
-          {
-            navigation.navigate('Logout');
-          }
+          dispatch(logOut());
+          console.log('==>');
         }}>
         <Icons name="logout" size={24} color={'red'} />
         <Text>Logout</Text>

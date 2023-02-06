@@ -6,9 +6,9 @@ import {
   Text,
   Image,
   KeyboardAvoidingView,
-
   TouchableOpacity,
   ScrollView,
+  ImageBackground,
 } from 'react-native';
 import background from '../Image/background.png';
 import imageo from '../Image/imageo.png';
@@ -94,7 +94,7 @@ const Register = ({navigation}) => {
 
       <View style={styles.container}>
         <ScrollView>
-          <Image style={styles.back} source={imageo} />
+          <ImageBackground style={styles.back} source={imageo} />
 
           <View style={{alignItems: 'center'}}></View>
 
@@ -170,7 +170,6 @@ const Register = ({navigation}) => {
                 <Picker.Item label="Male" value="Male" />
                 <Picker.Item label="Female" value="Female" />
               </Picker>
-             
             </View>
             <View style={styles.SectionStyle}>
               <TextInput
@@ -225,7 +224,6 @@ export default Register;
 
 const styles = StyleSheet.create({
   SectionStyle: {
-   
     flexDirection: 'row',
     height: 40,
     fontSize: 20,
